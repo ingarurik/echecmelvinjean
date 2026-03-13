@@ -1,0 +1,12 @@
+{
+  "name": "chess-royale",
+  "version": "1.0.0",
+  "private": true,
+  "scripts": {
+    "dev":    "wrangler pages dev public --compatibility-date=2024-09-23",
+    "deploy": "wrangler pages deploy public"
+  },
+  "devDependencies": {
+    "wrangler": "^3.0.0"
+  }
+}

@@ -1,0 +1,58 @@
+<!DOCTYPE html>
+<html lang="fr">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Chess Royale</title>
+  <link rel="stylesheet" href="style.css">
+</head>
+<body class="index-body">
+  <div class="container">
+    <div class="logo-area">
+      <div class="logo-icon">♛</div>
+      <h1>Chess Royale</h1>
+      <p class="subtitle">Des règles de dingue, des parties épiques</p>
+    </div>
+
+    <!-- Mode Selection -->
+    <div class="section" id="mode-section">
+      <h2 class="section-title">Choisis ton mode de jeu</h2>
+      <div class="mode-grid">
+        <div class="mode-card selected" data-mode="all-queens">
+          <div class="mode-icon">♛</div>
+          <div class="mode-name">Toutes Reines</div>
+          <div class="mode-desc">Chaque pièce est une reine. Le dernier avec des pièces gagne !</div>
+          <div class="mode-badge-new">Disponible</div>
+        </div>
+        <div class="mode-card disabled">
+          <div class="mode-icon">💀</div>
+          <div class="mode-name">À venir...</div>
+          <div class="mode-desc">D'autres modes déjantés arrivent bientôt</div>
+          <div class="mode-badge-soon">Bientôt</div>
+        </div>
+      </div>
+    </div>
+
+    <!-- Boutons principaux -->
+    <div class="section" id="action-section">
+      <div class="action-buttons">
+        <button class="btn btn-primary" id="create-btn">🎮 Créer une partie</button>
+        <button class="btn btn-secondary" id="join-btn">🔗 Rejoindre une partie</button>
+      </div>
+    </div>
+
+    <!-- Join Room -->
+    <div class="section hidden" id="join-section">
+      <div class="join-form">
+        <label class="input-label">Entre le code de la partie :</label>
+        <input type="text" id="join-code-input" placeholder="ABC123" maxlength="6" autocomplete="off" autocapitalize="characters">
+        <button class="btn btn-primary" id="confirm-join-btn">Rejoindre →</button>
+      </div>
+      <p class="error-text hidden" id="join-error">❌ Code invalide (minimum 4 caractères)</p>
+      <button class="btn btn-ghost" id="cancel-join-btn">← Retour</button>
+    </div>
+  </div>
+
+  <script src="app.js"></script>
+</body>
+</html>

@@ -1,0 +1,73 @@
+<!DOCTYPE html>
+<html lang="fr">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Chess Royale - Partie</title>
+  <link rel="stylesheet" href="style.css">
+</head>
+<body class="game-body">
+  <div class="game-container">
+
+    <!-- Header -->
+    <div class="game-header">
+      <a href="/" class="back-link">← Menu</a>
+      <span class="mode-badge-header" id="mode-badge">⏳ Connexion...</span>
+      <span class="code-badge-header">🔑 <span id="room-code-header">---</span></span>
+    </div>
+
+    <!-- Adversaire -->
+    <div class="player-row opponent-row" id="opponent-row">
+      <div class="player-dot dot-black" id="opponent-dot"></div>
+      <span class="player-label">Adversaire</span>
+      <span class="piece-count" id="opponent-count">16 ♛</span>
+    </div>
+
+    <!-- Échiquier -->
+    <div class="board-wrapper">
+      <div class="board-coords-top">
+        <span>a</span><span>b</span><span>c</span><span>d</span><span>e</span><span>f</span><span>g</span><span>h</span>
+      </div>
+      <div class="board-side-left">
+        <span>8</span><span>7</span><span>6</span><span>5</span><span>4</span><span>3</span><span>2</span><span>1</span>
+      </div>
+      <div class="board" id="board"></div>
+    </div>
+
+    <!-- Toi -->
+    <div class="player-row self-row" id="self-row">
+      <div class="player-dot dot-white" id="self-dot"></div>
+      <span class="player-label">Toi</span>
+      <span class="piece-count" id="self-count">16 ♛</span>
+    </div>
+
+    <!-- Barre de statut -->
+    <div class="status-bar" id="status-bar">⏳ Connexion au serveur...</div>
+
+  </div>
+
+  <!-- Modal Fin de partie -->
+  <div class="modal-overlay hidden" id="game-over-modal">
+    <div class="modal">
+      <div class="modal-big-icon" id="modal-icon">🏆</div>
+      <h2 id="modal-title">Victoire !</h2>
+      <p id="modal-message">Tu as éliminé toutes les pièces adverses !</p>
+      <a href="/" class="btn btn-primary">🎮 Rejouer</a>
+    </div>
+  </div>
+
+  <!-- Modal Attente -->
+  <div class="modal-overlay" id="waiting-overlay">
+    <div class="modal">
+      <div class="modal-big-icon">⏳</div>
+      <h2>En attente d'un adversaire</h2>
+      <p>Envoie ce code à ton pote :</p>
+      <div class="waiting-code-box" id="waiting-code">---</div>
+      <button class="btn btn-small copy-btn" id="copy-waiting-btn">📋 Copier le code</button>
+      <p class="waiting-hint">Dès qu'il rejoint, la partie démarre automatiquement !</p>
+    </div>
+  </div>
+
+  <script src="app.js"></script>
+</body>
+</html>
